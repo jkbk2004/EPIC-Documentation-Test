@@ -27,16 +27,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Echo check run ids
         run: echo "job ids - ${{ toJSON(fromJSON(steps.fetch.outputs.data).jobs.*.id) }}
-
-#       cd ${{ github.workspace }}/tests/ci
- #       jobs_url=$GITHUB_API_URL/repos/$GITHUB_REPOSITORY/actions/runs/$helper_id/jobs
- #       conclusion=$(echo $jobs_url | ./check_status.py completion "Repo check")
- #       if [[ $conclusion == "failure" ]]; then
- #         exit 1
- #       fi
- #   - uses: actions/cache@v2
- #     with:
- #       path: ~/repocheck_file
- #       key: repocheck-${{ github.run_id }}
-       
-        
