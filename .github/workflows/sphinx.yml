@@ -31,7 +31,7 @@ jobs:
         helper_id=$(ls ~)
         cd ${{ github.workspace }}
         jobs_url=$GITHUB_API_URL/repos/$GITHUB_REPOSITORY/actions/runs
-        conclusion=$(echo $jobs_url $helper_id)
+        echo $jobs_url $helper_id
     - uses: actions/cache@v2
       with:
         path: ~/repocheck_file
