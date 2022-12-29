@@ -29,12 +29,12 @@ jobs:
     - name: Wait until repocheck in aux is complete
       run: |
         #helper_id=$(cat ~/id_file)
-        helper_id=$(cat ~)
+        helper_id=$(ls ~)
         cd ${{ github.workspace }}/tests/ci
         #jobs_url=$GITHUB_API_URL/repos/$GITHUB_REPOSITORY/actions/runs/$helper_id/jobs
         jobs_url=$GITHUB_API_URL/repos/$GITHUB_REPOSITORY/actions/runs
         #conclusion=$(echo $jobs_url | ./check_status.py completion "Repo check")
-        conclusion=$(echo $jobs_url)
+        conclusion=$(echo $jobs_url $helper_id)
         #if [[ $conclusion == "failure" ]]; then
         #  exit 1
         #fi
