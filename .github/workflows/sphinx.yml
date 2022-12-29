@@ -29,7 +29,7 @@ jobs:
     - name: Wait until repocheck in aux is complete
       run: |
         helper_id=$(ls ~)
-        cd ${{ github.workspace }}/tests/ci
+        cd ${{ github.workspace }}
         jobs_url=$GITHUB_API_URL/repos/$GITHUB_REPOSITORY/actions/runs
         conclusion=$(echo $jobs_url $helper_id)
     - uses: actions/cache@v2
