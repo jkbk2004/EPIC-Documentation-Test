@@ -146,5 +146,5 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
-    - name: Stop ec2 instances
-      run: aws ec2 stop-instances --instance-ids $aws_instance_id
+#    - name: Stop ec2 instances
+#      run: aws ec2 stop-instances --instance-ids $aws_instance_id
